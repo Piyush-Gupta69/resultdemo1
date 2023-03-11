@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-image: url('https://images.unsplash.com/photo-1533109721025-d1ae7ee7c1e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    background-size:inherit;
+    background-position: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  
+  
+  h1 {
+    text-align: center;
+    margin: 65px 0;
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  #poster-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .poster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    max-width: 300px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  
+  
+  .poster:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .poster img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .poster h2 {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
+  }
+  
+  .poster p {
+    margin: 10px 0;
+    font-style: italic;
+    color: #666;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
+  }
+  
+  .poster-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .poster-button:hover {
+    background-color: #666;
+  }
+
+  .label {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 50%;
+  }
+  .gold .label {
+    border-color: gold;
+    color: gold;
+  }
+  .silver .label {
+    border-color: silver;
+    color: silver;
+  }
+  .bronze .label {
+    border-color: #cd7f32;
+    color: #cd7f32;
+  }
+  
+  
+  .gold {
+    margin-top: 15px;
+    transform: rotate(-10deg);
+    box-shadow: 0px 8px 16px rgba(255, 215, 0, 0.5);
+  }
+  
+  .silver {
+    margin-top: -55px;
+    transform: rotate(0deg);
+    box-shadow: 0px 8px 16px rgba(192, 192, 192, 0.5);
+  }
+  
+  .bronze {
+    margin-bottom: 15px;
+    transform: rotate(10deg);
+    box-shadow: 0px 8px 16px rgba(205, 127, 50, 0.5);
+  }
+  

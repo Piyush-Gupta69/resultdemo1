@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+
+import JSConfetti from 'js-confetti'
+import { useState } from 'react';
+import Results from './results';
+
 import './App.css';
 
+
+
 function App() {
+  const [showComponent, setShowComponent] = useState(false);
+  const [buttonClicked, setButtonClicked] = useState(false);
+
+  function showing() {
+
+    const jsConfetti = new JSConfetti()
+    
+    jsConfetti.addConfetti({
+      emojis: ['✨'],
+      
+      emojiSize: 50,
+      confettiNumber: 100,
+    })
+    
+    setShowComponent(true);
+    setButtonClicked(true);
+    }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       {!buttonClicked && <button onClick={showing}>Click me</button>}
+      {showComponent && <Results />}
     </div>
   );
 }
 
 export default App;
+
